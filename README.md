@@ -19,7 +19,6 @@ A minimalist blog template focused on energy efficiency and low-power computing.
 
 ```bash
 npm install
-npm install astro-imagetools
 npm run dev
 npm run build  
 npm run preview
