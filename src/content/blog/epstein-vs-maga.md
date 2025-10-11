@@ -1,0 +1,39 @@
+---
+title: "COMING SOON: Our First Video Essay!"
+description: "It's about Trump, Epstein, and the Trump Party!"
+image: "/images/epstein.jpg"
+pubDate: 2025-10-09
+tags: ["Epstein", "Trump", "MAGA", "Conspiracy", "YouTube"]
+---
+
+# After Over Half a Decade: Our First Video
+
+**Armchair Authorities** was a concept I came up with back in 2019. I needed a YouTube channel name that was broad enough that it would allow me to create video content on just about anything that I wanted, yet still indicated, even if only a minor way, that I don't think myself more seriously than I should--that I'm aware of the limitations of my own knowledge, credentials, and experience.
+
+That does not mean, however, that our essays will not be **relentlessly** researched, edited, poured over, rewritten, edited some more.. You get the idea.
+
+I wanted the slogan for the channel to be: **Armchair Authorities: half the credentials, all of the research.**
+
+The quality and accuracy of our video essay work is something we both take extremely seriously, especially when choosing to tackle such important, complex, and nuanced topics. We may only be armchair authorities, but we will absolutey push our armchair capabilites to their limits.
+
+**The first video is an examination of the limits of devotion displayed by members of Trump Party, particularly the more conpiracy-minded ones, and the impact of this whole Epstein debacle on them.**
+
+**We can't wait to show it to you.**
+
+# Why Armchair Authorities?
+
+I'm kind of a weird person, and I have a lot of very different hobbies and interests.
+
+I've played music my entire life, though listen to and play mostly metal, have a neuroscience degree and previously worked in addiction treatment, went to law school for a bit before dropping out because I hated it, used to be a devout conservative Republican while growing up in the deep south, love video games and tech, have a connective tissue disorder that impacts my quality of life and has been the reason for numerous reconstrutive surgeries, am impacted by college football on a deep, emotional level . . . the list could go on and on.
+
+My significant other--the other half of Armchair Authorities--is at least as weird as I am, and it's fucking awesome.
+
+We also both be obsessive and perfectionists in ways that aren't always super productive. It's no coincidence that it's taken us at least 5 years to finally put out a video essay, despite the hundreds of ideas and partially written scripts from over the years.
+
+We had **A LOT** of "real life shit" happen and get in the way. We had a lot of failed starts that we ultimately decided weren't good enough. That a video essay is being uploaded at all is a small miracle all on its own.
+
+Bur what if we don't want to always talk about politics?
+
+I don't know about y'all, but that shit can get pretty depressing. And somtimes it's fun to just go on and on about things you're excited about. My partner loves film, and has extremely well developed tastes in that domain. What if we wanted to write a film review next? Followed by a video on every personal knowledge management and task tracking app that I've tested for unreasonable numbers of hours? Or a video on the neuroscience of addiction?
+
+If we didn't establish the freedom to make videos on whichever topics we thought were either most important or most interesting, this whole Armchair Authorities thing might have been snuffed out in the womb.

@@ -1,6 +1,5 @@
-import { defineConfig } from 'astro/config';
-import { astroImageTools } from "astro-imagetools";
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
-    integrations: [astroImageTools],
+  integrations: [],
 });
