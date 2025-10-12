@@ -8,6 +8,10 @@ tags: ["Charlie Kirk", "Hagiography", "Political Violence", "Cancel Culture"]
 
 # The Hagiography of Saint Charlie Kirk
 
+> This is a test quote
+> this is the second line
+> this is the third line
+
 The word **hagiography** refers to the biography of a saint, or an idealized telling of someone's biography.
 
 To hear so many Progressive pundits, personalities, and representatives of the left (I'm looking at you, [Ezra Klein](https://www.youtube.com/watch?v=UaeoDlLNnok)) concede to describing Kirk as some sort of fallen patron saint of free speech—as if he were one of the last of a dying breed of good faith public debaters, willing to honestly listen and contest all challengers who dared face him in the Thunderdome that was his signature "Change My Mind" booth—has been, frankly, both **sad and deeply disturbing.**
