@@ -1,0 +1,128 @@
+article {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", serif;
+}
+
+p {
+    margin: 1.2rem 0;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+blockquote {
+    border-left: 4px solid #6272a4;
+    background: rgba(98, 114, 164, 0.1);
+    padding: 1rem 1.5rem;
+    font-style: italic;
+    color: #ddd;
+    margin: 1.5rem 0;
+}
+
+em {
+    color: black;
+    font-style: italic;
+}
+
+.obsidian-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.obsidian-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.centered-btn-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.fake-btn {
+    display: inline-block;
+    background-color: #303241;
+    color: #b874ff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 7px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: default;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.fake-btn:hover {
+    color: #dc72ff;
+    background-color: #3a3c4a;
+    transform: translateY(-2px);
+}
+
+a {
+    color: #4493cc;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #502d3c;
+}
+
+article h1,
+article h2,
+article h3 {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+}
+
+ul,
+ol {
+    margin: 1.2rem 0;
+    padding-left: 2rem;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+pre {
+    background-color: #1e1f29;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: "JetBrains Mono", Consolas, monospace;
+    font-size: 0.9rem;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+code {
+    /*background-color: rgba(98, 114, 164, 0.2);*/
+    border-radius: 4px;
+    padding: 0.1rem 0.3rem;
+    font-family: "JetBrains Mono", monospace;
+}
