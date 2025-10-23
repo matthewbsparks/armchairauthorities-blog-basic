@@ -1,5 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+import DarkModeToggle from "../components/DarkModeToggle.astro";
+import "../styles/mdx-styling.css";
 
 interface Props {
     title: string;
@@ -24,6 +26,34 @@ const pages = await getCollection("page");
         />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
+
+        <script>
+            // Theme initialization script - prevents FOUC (Flash of Unstyled Content)
+            (function () {
+                function getStoredTheme() {
+                    if (typeof localStorage !== "undefined") {
+                        return localStorage.getItem("theme");
+                    }
+                    return null;
+                }
+
+                function getPreferredTheme() {
+                    const stored = getStoredTheme();
+                    if (stored) {
+                        return stored;
+                    }
+
+                    return window.matchMedia &&
+                        window.matchMedia("(prefers-color-scheme: dark)")
+                            .matches
+                        ? "dark"
+                        : "light";
+                }
+
+                const theme = getPreferredTheme();
+                document.documentElement.setAttribute("data-theme", theme);
+            })();
+        </script>
     </head>
     <body>
         <header>
@@ -59,6 +89,7 @@ const pages = await getCollection("page");
                             </a>
                         ))
                     }
+                    <DarkModeToggle />
                 </div>
             </nav>
         </header>
@@ -70,15 +101,33 @@ const pages = await getCollection("page");
 </html>
 <style>
     :root {
+        /* Light theme colors (default) */
         --text-primary: #1a1a1a;
         --text-secondary: #4a4a4a;
         --background: #f5f5f5;
         --accent: #2d2d2d;
+        --border: #e0e0e0;
+        --hover-bg: rgba(0, 0, 0, 0.05);
+        --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    /* Dark theme colors */
+    [data-theme="dark"] {
+        --text-primary: #f0f6fc;
+        --text-secondary: #8b949e;
+        --background: #010409;
+        --accent: #30363d;
+        --border: #30363d;
+        --hover-bg: rgba(255, 255, 255, 0.08);
+        --shadow: rgba(0, 0, 0, 0.5);
     }
     html {
         font-family: system-ui, sans-serif;
         background: var(--background);
         color: var(--text-primary);
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease;
     }
     body {
         margin: 0;
@@ -89,7 +138,8 @@ const pages = await getCollection("page");
     }
     header {
         padding: 2rem;
-        border-bottom: 1px solid var(--accent);
+        border-bottom: 1px solid var(--border);
+        background: var(--background);
     }
     nav {
         display: flex;
@@ -131,24 +181,25 @@ const pages = await getCollection("page");
         font-family: "Playfair Display", serif;
     }
     .nav-link:hover {
-        background-color: rgba(0, 0, 0, 0.05);
+        background-color: var(--hover-bg);
     }
     footer {
         margin-top: auto;
         padding: 2rem;
         text-align: center;
-        border-top: 1px solid var(--accent);
+        border-top: 1px solid var(--border);
         color: var(--text-secondary);
+        background: var(--background);
     }
     article img {
         border-radius: 8px;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 6px 16px var(--shadow);
         transition:
             transform 0.25s ease,
             box-shadow 0.25s ease;
     }
     article img:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 10px 24px var(--shadow);
     }
 </style>

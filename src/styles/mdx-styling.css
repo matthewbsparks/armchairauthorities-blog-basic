@@ -1,11 +1,20 @@
+/* Base article styling */
 article {
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
     font-size: 1.2rem;
     line-height: 1.7;
     max-width: 720px;
     margin: 0 auto;
     padding: 2rem 1rem;
+    background: var(--background);
+    color: var(--text-primary);
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
+/* Headings */
 h1,
 h2,
 h3,
@@ -13,39 +22,60 @@ h4,
 h5,
 h6 {
     font-family: "Playfair Display", serif;
+    color: var(--text-primary);
 }
 
 p {
     margin: 1.2rem 0;
+    color: var(--text-primary);
 }
 
+/* Figure captions */
 figcaption {
     text-align: center;
     font-size: 0.9rem;
     opacity: 0.8;
+    color: var(--text-secondary);
 }
 
+/* Blockquotes */
 blockquote {
-    border-left: 4px solid #6272a4;
-    background: rgba(98, 114, 164, 0.1);
+    border-left: 4px solid var(--blockquote-border, #6272a4);
+    background: var(--blockquote-bg, rgba(98, 114, 164, 0.1));
     padding: 1rem 1.5rem;
     font-style: italic;
-    color: #ddd;
+    color: var(--text-primary);
     margin: 1.5rem 0;
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
 }
 
+/* Dark theme blockquote colors */
+[data-theme="dark"] blockquote {
+    --blockquote-border: #58a6ff;
+    --blockquote-bg: rgba(88, 166, 255, 0.1);
+}
+
+/* Emphasis */
 em {
-    color: black;
+    color: var(--emphasis-color, #000000);
     font-style: italic;
 }
 
+/* Dark theme emphasis */
+[data-theme="dark"] em {
+    --emphasis-color: #f0f6fc;
+}
+
+/* Image styling */
 .obsidian-img {
     display: block;
     margin: 0 auto;
     max-width: 90%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 16px var(--image-shadow, rgba(0, 0, 0, 0.25));
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease;
@@ -53,18 +83,29 @@ em {
 
 .obsidian-img:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 10px 24px var(--image-shadow-hover, rgba(0, 0, 0, 0.35));
 }
 
+/* Dark theme image shadows */
+[data-theme="dark"] .obsidian-img {
+    --image-shadow: rgba(0, 0, 0, 0.8);
+}
+
+[data-theme="dark"] .obsidian-img:hover {
+    --image-shadow-hover: rgba(0, 0, 0, 0.9);
+}
+
+/* Centered button container */
 .centered-btn-container {
     text-align: center;
     margin: 2rem 0;
 }
 
+/* Fake button styling */
 .fake-btn {
     display: inline-block;
-    background-color: #303241;
-    color: #b874ff;
+    background-color: var(--btn-bg, #303241);
+    color: var(--btn-color, #b874ff);
     font-weight: bold;
     text-decoration: none;
     border-radius: 7px;
@@ -73,33 +114,52 @@ em {
     cursor: default;
     transition:
         background-color 0.3s ease,
-        transform 0.2s ease;
+        transform 0.2s ease,
+        color 0.3s ease;
 }
 
 .fake-btn:hover {
-    color: #dc72ff;
-    background-color: #3a3c4a;
+    color: var(--btn-hover-color, #dc72ff);
+    background-color: var(--btn-hover-bg, #3a3c4a);
     transform: translateY(-2px);
 }
 
+/* Dark theme button colors */
+[data-theme="dark"] .fake-btn {
+    --btn-bg: #21262d;
+    --btn-color: #a5a5ff;
+    --btn-hover-color: #c9c9ff;
+    --btn-hover-bg: #30363d;
+}
+
+/* Links */
 a {
-    color: #4493cc;
+    color: var(--link-color, #4493cc);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s ease;
 }
 
 a:hover {
-    color: #502d3c;
+    color: var(--link-hover-color, #502d3c);
 }
 
+/* Dark theme link colors */
+[data-theme="dark"] a {
+    --link-color: #58a6ff;
+    --link-hover-color: #79c0ff;
+}
+
+/* Article headings */
 article h1,
 article h2,
 article h3 {
     text-align: center;
     font-family: "Playfair Display", serif;
+    color: var(--text-primary);
 }
 
+/* Lists */
 ul,
 ol {
     margin: 1.2rem 0;
@@ -108,21 +168,88 @@ ol {
 
 li {
     margin: 0.5rem 0;
+    color: var(--text-primary);
 }
 
+/* Code blocks */
 pre {
-    background-color: #1e1f29;
+    background-color: var(--code-bg, #1e1f29);
     padding: 1rem;
     border-radius: 8px;
     overflow-x: auto;
     font-family: "JetBrains Mono", Consolas, monospace;
     font-size: 0.9rem;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 10px var(--code-shadow, rgba(0, 0, 0, 0.4));
+    color: var(--code-text, #f8f8f2);
+    transition: background-color 0.3s ease;
 }
 
+/* Dark theme code blocks */
+[data-theme="dark"] pre {
+    --code-bg: #161b22;
+    --code-shadow: rgba(0, 0, 0, 0.8);
+    --code-text: #e6edf3;
+}
+
+/* Light theme code blocks */
+[data-theme="light"] pre {
+    --code-bg: #f6f8fa;
+    --code-shadow: rgba(0, 0, 0, 0.1);
+    --code-text: #24292f;
+}
+
+/* Inline code */
 code {
-    /*background-color: rgba(98, 114, 164, 0.2);*/
     border-radius: 4px;
     padding: 0.1rem 0.3rem;
     font-family: "JetBrains Mono", monospace;
+    background-color: var(--inline-code-bg, rgba(175, 184, 193, 0.2));
+    color: var(--inline-code-text, inherit);
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+/* Dark theme inline code */
+[data-theme="dark"] code {
+    --inline-code-bg: rgba(110, 118, 129, 0.6);
+    --inline-code-text: #f0f6fc;
+}
+
+/* Light theme inline code */
+[data-theme="light"] code {
+    --inline-code-bg: rgba(175, 184, 193, 0.2);
+    --inline-code-text: #24292f;
+}
+
+/* Tables (if you use them) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: var(--background);
+}
+
+th,
+td {
+    border: 1px solid var(--border, #e0e0e0);
+    padding: 0.75rem;
+    text-align: left;
+    color: var(--text-primary);
+}
+
+th {
+    background-color: var(--table-header-bg, rgba(0, 0, 0, 0.05));
+    font-weight: bold;
+}
+
+/* Dark theme tables */
+[data-theme="dark"] th {
+    --table-header-bg: rgba(255, 255, 255, 0.08);
+}
+
+/* Horizontal rules */
+hr {
+    border: none;
+    border-top: 1px solid var(--border, #e0e0e0);
+    margin: 2rem 0;
 }

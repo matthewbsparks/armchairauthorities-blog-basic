@@ -16,6 +16,7 @@ const posts = await getCollection("blog");
                             title={post.data.title}
                             description={post.data.description}
                             image={post.data.image}
+                            pubDate={post.data.pubDate}
                         />
                     </a>
                 ))
@@ -29,6 +30,9 @@ const posts = await getCollection("blog");
         padding: 2rem;
         max-width: 1400px;
         margin: 0 auto;
+        background: var(--background);
+        min-height: calc(100vh - 200px);
+        transition: background-color 0.3s ease;
     }
     .blog-grid {
         display: grid;
@@ -37,6 +41,11 @@ const posts = await getCollection("blog");
     }
     .card-link {
         text-decoration: none;
+        color: inherit;
+        transition: transform 0.2s ease;
+    }
+    .card-link:hover {
+        transform: scale(1.02);
     }
     @media (max-width: 1200px) {
         .blog-grid {
@@ -51,6 +60,9 @@ const posts = await getCollection("blog");
     @media (max-width: 600px) {
         .blog-grid {
             grid-template-columns: 1fr;
+        }
+        main {
+            padding: 1rem;
         }
     }
 </style>
