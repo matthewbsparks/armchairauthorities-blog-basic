@@ -10,8 +10,12 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "@astrojs/mdx": "^4.3.7",
+    "@astrojs/vercel": "^8.0.4",
     "astro": "^5.14.4"
   }
 }
