@@ -3,7 +3,7 @@ interface Props {
     title: string;
     description: string;
     image: string;
-    pubDate: Date;
+    pubDate?: Date;
 }
 
 const { title, description, image, pubDate } = Astro.props;
@@ -14,15 +14,17 @@ const { title, description, image, pubDate } = Astro.props;
     <div class="content">
         <h2>{title}</h2>
         <p>{description}</p>
-        <time class="pub-date"
-            >{
-                pubDate.toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                })
-            }</time
-        >
+        {
+            pubDate && (
+                <time class="pub-date">
+                    {pubDate.toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                    })}
+                </time>
+            )
+        }
     </div>
 </article>
 
