@@ -55,7 +55,7 @@ const { title, description, image, pubDate } = Astro.props;
     }
 
     /* Dark theme card styling */
-    [data-theme="dark"] .blog-card {
+    :global([data-theme="dark"]) .blog-card {
         --card-bg: #0d1117;
         --card-border: #30363d;
         --card-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
@@ -74,7 +74,7 @@ const { title, description, image, pubDate } = Astro.props;
     }
 
     /* Dark theme hover effect */
-    [data-theme="dark"] .blog-card:hover {
+    :global([data-theme="dark"]) .blog-card:hover {
         --card-hover-shadow: 0 10px 24px rgba(0, 0, 0, 0.8);
         border-color: #484f58;
     }
@@ -93,7 +93,7 @@ const { title, description, image, pubDate } = Astro.props;
     }
 
     /* Dark theme image styling */
-    [data-theme="dark"] .blog-card img {
+    :global([data-theme="dark"]) .blog-card img {
         --img-filter: grayscale(80%) brightness(0.8);
     }
 
@@ -107,7 +107,7 @@ const { title, description, image, pubDate } = Astro.props;
     }
 
     /* Dark theme hover image styling */
-    [data-theme="dark"] .blog-card:hover img {
+    :global([data-theme="dark"]) .blog-card:hover img {
         --img-hover-filter: grayscale(60%) brightness(1.1);
     }
 
@@ -118,19 +118,19 @@ const { title, description, image, pubDate } = Astro.props;
         flex-direction: column;
     }
 
-    h2 {
+    .content h2 {
         margin: 0 0 0.75rem 0;
         font-size: 1.25rem;
         font-family: "Playfair Display", serif;
         font-weight: 600;
         line-height: 1.3;
-        color: var(--card-text-primary);
+        color: var(--card-text-primary) !important;
         transition: color 0.3s ease;
     }
 
-    p {
+    .content p {
         margin: 0;
-        color: var(--card-text-secondary);
+        color: var(--card-text-secondary) !important;
         line-height: 1.5;
         font-size: 0.95rem;
         font-weight: 400;
@@ -153,7 +153,7 @@ const { title, description, image, pubDate } = Astro.props;
         color: var(--accent);
     }
 
-    [data-theme="dark"] .blog-card:hover h2 {
+    :global([data-theme="dark"]) .blog-card:hover h2 {
         color: #58a6ff;
     }
 
@@ -163,7 +163,7 @@ const { title, description, image, pubDate } = Astro.props;
             border-width: 2px;
         }
 
-        [data-theme="dark"] .blog-card {
+        :global([data-theme="dark"]) .blog-card {
             --card-text-primary: #ffffff;
             --card-text-secondary: #c9d1d9;
         }
