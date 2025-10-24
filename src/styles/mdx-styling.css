@@ -63,8 +63,16 @@ em {
     font-style: italic;
 }
 
+b,
+strong {
+    color: var(--emphasis-color, #000000);
+    font-weight: bold;
+}
+
 /* Dark theme emphasis */
-[data-theme="dark"] em {
+[data-theme="dark"] em,
+b,
+strong {
     --emphasis-color: #f0f6fc;
 }
 
