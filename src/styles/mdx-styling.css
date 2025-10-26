@@ -63,21 +63,28 @@ blockquote {
 
 /* Emphasis */
 em {
-    color: var(--emphasis-color, #000000);
     font-style: italic;
+    color: var(--text-primary);
 }
 
 b,
 strong {
-    color: var(--emphasis-color, #000000);
     font-weight: bold;
+    color: var(--text-primary);
+}
+
+/* Light theme emphasis */
+[data-theme="light"] b,
+[data-theme="light"] strong,
+[data-theme="light"] em {
+    color: var(--text-primary);
 }
 
 /* Dark theme emphasis */
-[data-theme="dark"] em,
-b,
-strong {
-    --emphasis-color: #f0f6fc;
+[data-theme="dark"] b,
+[data-theme="dark"] strong,
+[data-theme="dark"] em {
+    color: var(--text-primary);
 }
 
 /* Image styling */
@@ -85,13 +92,30 @@ strong {
 article img {
     display: block;
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 70%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 6px 16px var(--image-shadow, rgba(0, 0, 0, 0.25));
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease;
+}
+
+/* Image sizing classes for fine-tuned control */
+.img-small {
+    max-width: 50% !important;
+}
+
+.img-medium {
+    max-width: 70% !important;
+}
+
+.img-large {
+    max-width: 85% !important;
+}
+
+.img-full {
+    max-width: 95% !important;
 }
 
 .obsidian-img:hover,
