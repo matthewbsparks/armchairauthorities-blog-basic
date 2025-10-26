@@ -208,7 +208,28 @@ ol {
 
 li {
     margin: 0.5rem 0;
-    color: var(--text-primary);
+}
+
+/* Light theme list styling */
+[data-theme="light"] li {
+    color: #4a5568;
+}
+
+[data-theme="light"] ul > li::marker,
+[data-theme="light"] ol > li::marker {
+    color: #4493cc;
+    font-weight: bold;
+}
+
+/* Dark theme list styling */
+[data-theme="dark"] li {
+    color: #adbac7;
+}
+
+[data-theme="dark"] ul > li::marker,
+[data-theme="dark"] ol > li::marker {
+    color: #58a6ff;
+    font-weight: bold;
 }
 
 /* Code blocks */
